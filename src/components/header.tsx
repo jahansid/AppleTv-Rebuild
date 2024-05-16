@@ -15,8 +15,8 @@ export const Header = () => {
       </header>
       <div className=" font-noto sticky top-0 bg-bgHighlight text-white">
         <Container className="flex items-center justify-between min-h-11">
-          <p> Apple TV + </p>
-          <Button size="small">test</Button>
+          <p className=" text-xl font-semibold"> Apple TV + </p>
+          <Button size="small">Stream now</Button>
         </Container>
       </div>
     </>

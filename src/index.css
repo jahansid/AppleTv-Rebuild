@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-    font-family: "SF Pro Text";
-    src: url("./fonts/sf-pro-text_regular.ttf");
+  font-family: "SF Pro Text";
+  src: url("./fonts/sf-pro-text_regular.ttf");
+}
+@layer {
+  :root {
+    --header-row-height: 44px;
+    --header-height: calc(var(--header-row-height) * 2);
+    --hero-height: calc(100svh - var(--header-height));
+  }
 }

@@ -1,6 +1,7 @@
 
 import { Header } from "./components/header";
 import { Hero } from "./components/section/hero";
+import { Usps } from "./components/section/usps";
 import "./index.css";
 
 function App() {
@@ -10,8 +11,10 @@ function App() {
     <>
       <Header />
       <main>
+        <div className=" bg-background">
         <Hero />
-        <div>Features and Usps</div>
+        <Usps />
+        </div>
         <div>column layout</div>
         <div>carousel posters</div>
       </main>

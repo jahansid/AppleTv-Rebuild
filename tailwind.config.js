@@ -1,10 +1,8 @@
+import { transform } from "typescript";
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
       background: "#000",
@@ -25,9 +23,18 @@ export default {
       "4xl": "2.5rem", // 48px
       "5xl": "4.5rem", // 72px
     },
+    keyframes: {
+      "carousel-move": {
+        "0%": { transform: "translateX(0)" },
+        "100%": { transform: "translateX(-100%)" },
+      },
+    },
+    animation: {
+      "carousel-move": "carousel-move var(--duration,80s) infinite",
+    },
     fontFamily: {
-      noto: ["Noto Sans", "sans-serif"]
+      noto: ["Noto Sans", "sans-serif"],
     },
   },
   plugins: [],
-}
+};

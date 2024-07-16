@@ -2,6 +2,7 @@
 import { Header } from "./components/header";
 import { Hero } from "./components/section/hero";
 import { Usps } from "./components/section/usps";
+import { VideoCarousel } from "./components/section/videocarousel";
 import "./index.css";
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
         <Hero />
         <Usps />
         </div>
-        <div>column layout</div>
-        <div>carousel posters</div>
+        {/* <div>column layout</div> */}
+        <VideoCarousel />
       </main>
     </>
   )

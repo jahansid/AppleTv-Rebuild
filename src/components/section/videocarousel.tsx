@@ -66,7 +66,7 @@ export const VideoCarousel = () => {
           <div className=" flex relative gap-5 mb-5 left-1/2 -translate-x-1/2">
             <motion.div
               style={{ opacity: posterOpacity, x: posterTranslateXLeft }}
-              className=" w-[60vw] aspect-video shrink-0 overflow-clip rounded-2xl"
+              className=" w-[300px] md:w-[60vw] aspect-[9/16] md:aspect-video shrink-0 overflow-clip rounded-2xl"
             >
               <img
                 className=" w-full h-full object-cover"
@@ -76,7 +76,7 @@ export const VideoCarousel = () => {
             </motion.div>
             <motion.div
               style={{ scale }}
-              className=" relative w-[60vw] aspect-video shrink-0 overflow-clip rounded-2xl"
+              className=" relative w-[300px] md:w-[60vw] aspect-[9/16] md:aspect-video shrink-0 overflow-clip rounded-2xl"
             >
               <img
                 className=" w-full h-full object-cover"
@@ -88,7 +88,7 @@ export const VideoCarousel = () => {
                   active: { opacity: 1 },
                   inactive: { opacity: 0 },
                 }}
-                className="absolute bottom-0 left-0 flex w-full items-center justify-between p-5 text-lg"
+                className="absolute bottom-0 left-0 flex flex-col md:flex-row gap-4 md:gap-0 w-full items-center md:justify-between p-5 text-lg text-white"
               >
                 <p>Video title demo</p>
                 <Button>Watch now</Button>
@@ -96,7 +96,7 @@ export const VideoCarousel = () => {
             </motion.div>
             <motion.div
               style={{ opacity: posterOpacity, x: posterTranslateXRight }}
-              className=" w-[60vw] aspect-video shrink-0 overflow-clip rounded-2xl"
+              className=" w-[300px] md:w-[60vw] aspect-[9/16] md:aspect-video shrink-0 overflow-clip rounded-2xl"
             >
               <img
                 className=" w-full h-full object-cover"
@@ -107,7 +107,7 @@ export const VideoCarousel = () => {
           </div>
         </div>
       </div>
-      <div className=" -mt-[calc((100vh-(60vw*(9/16)))/2)] pt-4 space-y-3">
+      <div className=" md:-mt-[calc((100vh-(60vw*(9/16)))/2)] -mt-[calc((100vh-(300px*(16/9)))/2)] pt-4 space-y-3">
         <SmallMoviesCarousel movies={randomMoviesSet1} />
         <div className="[--duration:74s] [--carousel-offset:-32px]">
           <SmallMoviesCarousel movies={randomMoviesSet2} />
@@ -124,7 +124,7 @@ const SmallMoviesCarousel = ({ movies }: { movies: Movie[] }) => {
         {movies.map((movie, index) => (
           <div
             key={`${movie.name} - ${index}`}
-            className=" w-[23vw] aspect-video shrink-0"
+            className=" w-[40vw] md:w-[23vw] aspect-video shrink-0"
           >
             <img
               className="w-full h-full object-cover rounded-2xl"
